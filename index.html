@@ -1,1 +1,484 @@
-Hydebit Inc
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyde Bit LLC - AI-Powered Software Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="HYDE-BIT.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0f3460;
+            --secondary-color: #16213e;
+            --text-color: #333;
+            --light-bg: #f4f4f4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+        }
+
+        .btn {
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 0.5rem 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 80px;
+            width: auto;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        #hero {
+            height: 100vh;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding-top: 40vh;
+        }
+
+        .carousel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .carousel-item.active {
+            opacity: 1;
+        }
+
+        .carousel-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        #about, #services, #contact {
+            background-color: var(--light-bg);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .about-item {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .about-item h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .about-item ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .about-item li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .about-item li i {
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+            }
+
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        #case-study {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .case-study-content {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .case-study-text {
+            flex: 1;
+        }
+
+        .case-study-image {
+            flex: 1;
+        }
+
+        .case-study-img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .result-item {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .result-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        blockquote {
+            font-style: italic;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 1rem;
+            margin: 2rem 0;
+        }
+
+        cite {
+            display: block;
+            margin-top: 0.5rem;
+            font-style: normal;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .case-study-content {
+                flex-direction: column;
+            }
+        }
+
+        .case-study-image small {
+            display: block;
+            text-align: center;
+            margin-top: 0.5rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="HYDE-BIT.png" alt="Hyde Bit LLC Logo" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#case-study">Case Study</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="carousel">
+                <div class="carousel-item active" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80')"></div>
+                <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1639322537228-f710d846310a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80')"></div>
+                <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1633265486064-086b219458ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')"></div>
+                <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1516110833967-0b5716ca1387?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80')"></div>
+            </div>
+            <div class="hero-content">
+                <div class="container">
+                    <h1>HYDE BIT</h1>
+                    <p>Revolutionizing AI and Software Development Services</p>
+                    <br />
+                    <a href="#contact" class="btn">Get Started</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <div class="about-grid">
+                    <div class="about-item">
+                        <h3>Our Company</h3>
+                        <p>Founded in Dubai in 2023, Hyde Bit revolutionizes AI and software development services. We empower businesses with advanced technologies, driving innovation and growth. Our team of passionate innovators pushes the boundaries of AI, creating solutions that transform industries and improve lives.</p>
+                    </div>
+                    <div class="about-item">
+                        <h3>Our Founder</h3>
+                        <p>Joel Wang, our visionary CEO, brings over a decade of AI and software development expertise. His leadership and innovative approach shape Hyde Bit's mission to make AI accessible and impactful for businesses of all sizes, fostering long-term partnerships and success.</p>
+                    </div>
+                    <div class="about-item">
+                        <h3>Our Values</h3>
+                        <ul>
+                            <li><i class="fas fa-lightbulb"></i> Innovation</li>
+                            <li><i class="fas fa-balance-scale"></i> Integrity</li>
+                            <li><i class="fas fa-users"></i> Collaboration</li>
+                            <li><i class="fas fa-award"></i> Excellence</li>
+                        </ul>
+                    </div>
+                    <div class="about-item">
+                        <h3>Our Mission</h3>
+                        <p>To democratize AI technology and empower businesses worldwide to harness the full potential of artificial intelligence, driving innovation and sustainable growth across industries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <h3>AI-Powered Analytics</h3>
+                        <p>Transform customer feedback into actionable insights with our advanced sentiment analysis tool.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Strategic Marketing Insights</h3>
+                        <p>Generate data-driven marketing plans to target specific customer segments effectively.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Predictive Analytics</h3>
+                        <p>Forecast customer behavior and trends to stay ahead of the competition.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="case-study">
+            <div class="container">
+                <h2>Case Study: AI-Powered Marketing Revolution</h2>
+                <div class="case-study-content">
+                    <div class="case-study-text">
+                        <p>Our AI-driven marketing platform transformed a leading e-commerce partnership's approach, resulting in significant performance improvements across key indicators.</p>
+                        <div class="results-grid">
+                            <div class="result-item">
+                                <span class="result-number">32%</span>
+                                <p>Increase in conversion rate</p>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">45%</span>
+                                <p>Boost in customer engagement</p>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">28%</span>
+                                <p>Reduction in marketing spend</p>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">3.5x</span>
+                                <p>Return on investment</p>
+                            </div>
+                        </div>
+                        <blockquote>
+                            "Hyde Bit's AI solution has revolutionized our marketing approach. We've seen unprecedented growth and efficiency in our campaigns."
+                            <cite>- Karl Lee, Marketing Director</cite>
+                        </blockquote>
+                    </div>
+                    <div class="case-study-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="AI-Powered Marketing Dashboard" class="case-study-img">
+                        <small>Photo by Luke Chesser on Unsplash</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Get in touch to learn how we can help your business leverage AI-powered solutions.</p>
+                <p><i class="fas fa-envelope"></i> info@hydebit.com</p>
+                <p><i class="fas fa-phone"></i> +971 55 240 7997</p>
+                <p><i class="fas fa-map-marker-alt"></i> Maydan Freezone, Dubai, UAE</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Hyde Bit LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Carousel functionality
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        let currentItem = 0;
+
+        function nextItem() {
+            carouselItems[currentItem].classList.remove('active');
+            currentItem = (currentItem + 1) % carouselItems.length;
+            carouselItems[currentItem].classList.add('active');
+        }
+
+        setInterval(nextItem, 5000); // Change image every 5 seconds
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
